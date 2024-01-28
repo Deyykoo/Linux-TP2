@@ -160,3 +160,54 @@ Name:   github.com
 Address: 140.82.121.3
 ```
 
+## Partie 3 : Poupée russe
+
+```
+🌞 Récupérer le fichier meow
+- commande : sudo dnf install unzip
+- commande : sudo dnf install wget
+
+- commande : sudo wget https://gitlab.com/it4lik/b1-linux-2023//raw/master/tp/2/meow?inline=false
+
+[quentin@localhost ~]$ sudo wget https://gitlab.com/it4lik/b1-linux-2023/-/raw/master/tp/2/meow?inline=false
+--2024-01-28 22:33:39--  https://gitlab.com/it4lik/b1-linux-2023/-/raw/master/tp/2/meow?inline=false
+Resolving gitlab.com (gitlab.com)... 172.65.251.78, 2606:4700:90:0:f22e:fbec:5bed:a9b9
+Connecting to gitlab.com (gitlab.com)|172.65.251.78|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 18016947 (17M) [application/octet-stream]
+Saving to: ‘meow?inline=false’
+
+meow?inline=false             100%[=================================================>]  17.18M  23.0MB/s    in 0.7s
+
+2024-01-28 22:33:40 (23.0 MB/s) - ‘meow?inline=false’ saved [18016947/18016947]
+
+- commande :  mv 'meow?inline=false' meow
+
+
+🌞 Trouver le dossier dawa/
+- commande : file meow
+
+[quentin@localhost ~]$ file meow
+meow: Zip archive data, at least v2.0 to extract
+[quentin@localhost ~]$ mv meow meow.zip
+meow.zip
+[quentin@localhost ~]$ sudo unzip meow.zip
+[sudo] password for quentin:
+Archive:  meow.zip
+  inflating: meow
+
+
+🌞 Dans le dossier dawa/, déterminer le chemin vers
+
+- commande : find -size 15M
+./folder31/19/file39
+
+- commande :  grep "777777" -r
+folder43/38/file41:77777777777
+
+- commande : find -name cookie
+./folder14/25/cookie
+
+- commande : find -name ".*"
+./folder32/14/.hidden_file
+```
